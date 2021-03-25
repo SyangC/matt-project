@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+}
+  
+.sidenav {
+	height: 100%;
+	width: 79px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	overflow: hidden;
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+	overflow: hidden;
+}
+
+.sidenav .sidenav-top a .logo {
+    padding: 12px 0px 0px 9px;
+}
+
+.sidenav-bottom {
+	width: 79px;
+}
+
+.viewport {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+  
+.parallax-parent {
+	position: relative;
+	top: 100vh;
+	left: 0;
+	width: 100vh;
+	height: 100vw;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-perspective-origin: 50% 50% 0;
+	perspective-origin: 50% 50% 0;
+	-webkit-perspective: 3px;
+	perspective: 3px;
+}
+
+.parallax-parent::-webkit-scrollbar {
+	display: none;
+}
+
+.parallax-child-container {
+	position: absolute;
+	width: 100vh;
+	height: calc(100vw + 79px);
+	text-align: center;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.parallax-child-container:nth-of-type(1) {
+	top: 0vw;
+}
+
+.parallax-child-container:nth-of-type(2) {
+	top: 100vw;
+}
+
+.parallax-child-container:nth-of-type(3) {
+	top: 200vw;
+}
+
+.parallax-child-container:nth-of-type(4) {
+	top: 300vw;
+}
+
+.parallax-child-container:nth-of-type(5) {
+	top: 400vw;
+}
+
+.parallax-child-container:nth-of-type(6) {
+	top: 500vw;
+}
+
+.parallax-child-container:nth-of-type(7) {
+	top: 600vw;
+}
+
+.parallax-child-container:nth-of-type(8) {
+	top: 700vw;
+}
+
+.parallax-child {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100vw;
+	padding: 0 30vw;
+	-webkit-transform-origin: 50% 50% 0;
+	transform-origin: 50% 50% 0;
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+	transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+  
+.parallax-child h1 {
+	font-size: 5rem;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: whitesmoke;
+	/* -webkit-transition: color 1s ease-in-out, -webkit-transform 3s ease-in-out;
+	transition: color 1s ease-in-out, -webkit-transform 3s ease-in-out;
+	transition: transform 3s ease-in-out, color 1s ease-in-out;
+	transition: transform 3s ease-in-out, color 1s ease-in-out, -webkit-transform 3s ease-in-out; */
+	cursor: pointer;
+}
+  
+.parallax-background {
+	position: relative;
+	top: 50vh;
+	left: 50vw;
+	width: 600vw;
+	height: 100vh;
+	-webkit-transform: translateX(-50%) translateY(180%) translateZ(-8px) scale(2.5);
+	transform: translateX(-50%) translateY(180%) translateZ(-8px) scale(2.5);
+	z-index: -1;
+}
+
+.parallax-image-container {
+	position: relative;
+	height: 100vh;
+	z-index: -1;
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+
+/* .parallax-image-container:nth-of-type(1) {
+	background-color: red;
+	border-color: white;
+}
+
+.parallax-image-container:nth-of-type(2) {
+	background-color: blue;
+	border-color: white;
+}
+
+.parallax-image-container:nth-of-type(3) {
+	background-color: red;
+	border-color: white;
+}
+
+.parallax-image-container:nth-of-type(4) {
+	background-color: blue;
+	border-color: white;
+}
+
+.parallax-image-container:nth-of-type(5) {
+	background-color: red;
+	border-color: white;
+} */
+
+.parallax-image {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	line-height: 100vh;
+	font-family: sans-serif;
+	font-size: 10rem;
+	text-align: center;
+	-webkit-text-stroke: 2px #ccc;
+	-webkit-text-fill-color: transparent;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.inst-text {
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	transform:rotate(-90deg);
+	white-space: nowrap;
+}
+
+.inst-logo {
+	white-space: nowrap;
+	margin: 0px;
+	display: inline-block;
+}
