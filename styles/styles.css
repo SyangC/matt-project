@@ -3,10 +3,13 @@ html, body {
   overflow: hidden;
 }
 
+body {
+	background-color: #000;
+}
+
 .background {
-	background-size: cover;
+	/* background-size: auto; */
 	background-repeat: no-repeat;
-	background-position: center center;
 	overflow: hidden;
 	will-change: transform;
 	-webkit-backface-visibility: hidden;
@@ -15,7 +18,10 @@ html, body {
 	position: fixed;
 	width: 130vw;
 	transform: translateX(30vw);
-	transition: all 3s cubic-bezier(0.22, 0.44, 0, 1);
+	transition: all 1.5s cubic-bezier(0.22, 0.44, 0, 1);
+	background-size: auto;
+	background-color: #000;
+	/* background-size: cover; */
 }
 .background:before {
 	content: "";
@@ -48,25 +54,170 @@ html, body {
   	background-image: url("../assets/image5.svg");
 }
 
-/* Set stacking context of slides */
+/* Set css of individual slides */
+/* slide 1 */
 .background:nth-child(1) {
+	background-position: 80% 35%;
+	background-size: 45%;
   	z-index: 5;
 }
 
+.background:nth-child(1) .content-wrapper  {
+	position: relative;
+	top: -15vh;
+	text-align: left;
+}
+
+.background:nth-child(1) .content-wrapper .content-title {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(1) .content-wrapper .content {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(1) .content-wrapper .content-mini {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+	font-size: 1.2vh;
+	margin-top: 3vh;
+}
+
+/* slide 2 */
 .background:nth-child(2) {
+	background-position: 80% 35%;
+	background-size: 45%;
   	z-index: 4;
 }
 
+.background:nth-child(2) .content-wrapper  {
+	position: relative;
+	top: -15vh;
+	text-align: left;
+}
+
+.background:nth-child(2) .content-wrapper .content-title {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(2) .content-wrapper .content {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(2) .content-wrapper .content-mini {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+	font-size: 1.2vh;
+	margin-top: 3vh;
+}
+
+/* slide 3 */
 .background:nth-child(3) {
+	background-position: 80% 35%;
+	background-size: 45%;
   	z-index: 3;
 }
 
+.background:nth-child(3) .content-wrapper  {
+	position: relative;
+	top: -15vh;
+	text-align: left;
+}
+
+.background:nth-child(3) .content-wrapper .content-title {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(3) .content-wrapper .content {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(3) .content-wrapper .content-mini {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+	font-size: 1.2vh;
+	margin-top: 3vh;
+}
+
+/* slide 4 */
 .background:nth-child(4) {
+	background-position: 80% 35%;
+	background-size: 45%;
   	z-index: 2;
 }
 
+.background:nth-child(4) .content-wrapper  {
+	position: relative;
+	top: -15vh;
+	text-align: left;
+}
+
+.background:nth-child(4) .content-wrapper .content-title {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(4) .content-wrapper .content {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(4) .content-wrapper .content-mini {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+	font-size: 1.2vh;
+	margin-top: 3vh;
+}
+
+/* slide 5 */
 .background:nth-child(5) {
+	background-position: 80% 35%;
+	background-size: 45%;
   	z-index: 1;
+}
+
+.background:nth-child(5) .content-wrapper  {
+	position: relative;
+	top: -15vh;
+	text-align: left;
+}
+
+.background:nth-child(5) .content-wrapper .content-title {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(5) .content-wrapper .content {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+}
+
+.background:nth-child(5) .content-wrapper .content-mini {
+	position: relative;
+	width: 35vw;
+	left: 15vw;
+	font-size: 1.2vh;
+	margin-top: 3vh;
 }
 
 .content-wrapper {
@@ -82,35 +233,88 @@ html, body {
 	will-change: transform;
 	-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
-	transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+	transition: all 1s cubic-bezier(0.22, 0.44, 0, 1);
 }
+
 .content-title {
 	font-size: 12vh;
 	line-height: 1.4;
 }
 
-.background.up-scroll {
-  	transform: translate3d(-15vw, 0, 0);
-}
-.background.up-scroll .content-wrapper {
-  	transform: translate3d(15vw, 40vh, 0);
-}
-.background.up-scroll + .background {
-  	transform: translate3d(30vw, 0, 0);
-}
-.background.up-scroll + .background .content-wrapper {
-  	transform: translate3d(30vw, 40vh, 0);
+.content {
+	font-size: 2vh;
+	line-height: 1.4;
 }
 
-.background.down-scroll {
-  	transform: translate3d(-130vw, 0, 0);
-}
-.background.down-scroll .content-wrapper {
-  	transform: translate3d(0, 40vh, 0);
-}
-.background.down-scroll + .background:not(.down-scroll) {
+.background.left-scroll {
   	transform: translate3d(-15vw, 0, 0);
 }
-.background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+.background.left-scroll .content-wrapper {
   	transform: translate3d(15vw, 40vh, 0);
+}
+.background.left-scroll + .background {
+  	transform: translate3d(30vw, 0, 0);
+}
+.background.left-scroll + .background .content-wrapper {
+  	transform: translate3d(70vw, 40vh, 0);
+}
+
+.background.right-scroll {
+  	transform: translate3d(-130vw, 0, 0);
+}
+.background.right-scroll .content-wrapper {
+  	transform: translate3d(-100vw, 40vh, 0);
+}
+.background.right-scroll + .background:not(.right-scroll) {
+  	transform: translate3d(-15vw, 0, 0);
+}
+.background.right-scroll + .background:not(.right-scroll) .content-wrapper {
+  	transform: translate3d(15vw, 40vh, 0);
+}
+
+
+/* side menu */
+.sidenav {
+	height: 100%;
+	width: 79px;
+	position: fixed;
+	z-index: 6;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	overflow: hidden;
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex;
+}
+
+.sidenav .sidenav-top a .logo {
+    padding: 12px 0px 0px 9px;
+}
+
+.sidenav-bottom {
+	transform: translate3D(0vh, -5vh, 0vh) rotate(-90deg);
+	height: 5vh;
+	display: flex;
+	flex-direction: row;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.inst-text {
+	white-space: nowrap;
+	padding: 1vh 0;
+	text-align: center;
+    font-size: 25px;
+    color: #f1f1f1;
+}
+
+.inst-logo {
+	text-align: center;
 }

@@ -56,10 +56,10 @@ window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {
   var $previousSlide = $(".background").eq(currentSlideNumber - 1);
-  $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+  $previousSlide.removeClass("left-scroll").addClass("right-scroll");
 }
 
 function previousItem() {
   var $currentSlide = $(".background").eq(currentSlideNumber);
-  $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+  $currentSlide.removeClass("right-scroll").addClass("left-scroll");
 }
