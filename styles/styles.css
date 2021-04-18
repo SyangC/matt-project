@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+	font-family: bigCarlson;
+	src: url("./fonts/Big Caslon Medium.ttf");
+}
+
 html, body {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -57,26 +62,29 @@ body {
 /* Set css of individual slides */
 /* slide 1 */
 .background:nth-child(1) {
-	background-position: 80% 35%;
-	background-size: 45%;
+	background-position: 88% 45%;
+    background-size: 55%;
   	z-index: 5;
 }
 
 .background:nth-child(1) .content-wrapper  {
 	position: relative;
-	top: -15vh;
+	top: -20vh;
+	left: -6VW;
 	text-align: left;
 }
 
 .background:nth-child(1) .content-wrapper .content-title {
 	position: relative;
-	width: 35vw;
+	font-size: 15.8vh;
+	line-height: 19.6vh;
+	width: 31vw;
 	left: 15vw;
 }
 
 .background:nth-child(1) .content-wrapper .content {
 	position: relative;
-	width: 35vw;
+	width: 31vw;
 	left: 15vw;
 }
 
@@ -90,9 +98,9 @@ body {
 
 /* slide 2 */
 .background:nth-child(2) {
-	background-position: 80% 35%;
-	background-size: 45%;
-  	z-index: 4;
+	background-position: 71% 26%;
+    background-size: 31%;
+    z-index: 4;
 }
 
 .background:nth-child(2) .content-wrapper  {
@@ -101,16 +109,14 @@ body {
 	text-align: left;
 }
 
-.background:nth-child(2) .content-wrapper .content-title {
-	position: relative;
-	width: 35vw;
-	left: 15vw;
-}
-
 .background:nth-child(2) .content-wrapper .content {
+	font-family: "bigCarlson";
+	font-size: 3.8vh;
+	line-height: 4.6vh;
 	position: relative;
-	width: 35vw;
-	left: 15vw;
+	width: 29vw;
+    left: 24vw;
+    top: -13vh;
 }
 
 .background:nth-child(2) .content-wrapper .content-mini {
@@ -141,9 +147,13 @@ body {
 }
 
 .background:nth-child(3) .content-wrapper .content {
+	font-family: "bigCarlson";
+	font-size: 4.9vh;
+	line-height: 5.9vh;
 	position: relative;
-	width: 35vw;
-	left: 15vw;
+	width: 43vw;
+	left: 9vw;
+	top: 15vh;
 }
 
 .background:nth-child(3) .content-wrapper .content-mini {
@@ -156,26 +166,31 @@ body {
 
 /* slide 4 */
 .background:nth-child(4) {
-	background-position: 80% 35%;
-	background-size: 45%;
+	background-position: 86% 35%;
+    background-size: 64%;
   	z-index: 2;
 }
 
 .background:nth-child(4) .content-wrapper  {
 	position: relative;
-	top: -15vh;
+	top: -7vh;
 	text-align: left;
 }
 
 .background:nth-child(4) .content-wrapper .content-title {
+	font-size: 4.9vh;
+	line-height: 5.9vh;
 	position: relative;
 	width: 35vw;
 	left: 15vw;
 }
 
 .background:nth-child(4) .content-wrapper .content {
+	font-size: 1.7vh;
+	line-height: 2.6vh;
 	position: relative;
-	width: 35vw;
+	position: relative;
+	width: 23vw;
 	left: 15vw;
 }
 
@@ -189,8 +204,8 @@ body {
 
 /* slide 5 */
 .background:nth-child(5) {
-	background-position: 80% 35%;
-	background-size: 45%;
+	background-position: 75% 50%;
+    background-size: 57%;
   	z-index: 1;
 }
 
@@ -207,9 +222,12 @@ body {
 }
 
 .background:nth-child(5) .content-wrapper .content {
+	font-family: "bigCarlson";
+	font-size: 3.8vh;
+	line-height: 4.6vh;
 	position: relative;
-	width: 35vw;
-	left: 15vw;
+	width: 29vw;
+	left: 10vw;
 }
 
 .background:nth-child(5) .content-wrapper .content-mini {
@@ -228,7 +246,6 @@ body {
 	flex-flow: column nowrap;
 	color: #fff;
 	font-family: Montserrat;
-	text-transform: uppercase;
 	transform: translate3d(40vw, 40vh, 0);
 	will-change: transform;
 	-webkit-backface-visibility: hidden;
@@ -239,11 +256,13 @@ body {
 .content-title {
 	font-size: 12vh;
 	line-height: 1.4;
+	font-family: 'bigCarlson';
 }
 
 .content {
 	font-size: 2vh;
-	line-height: 1.4;
+	line-height: 2.5vh;
+	font-family: 'Poppins', sans-serif;
 }
 
 .background.left-scroll {
@@ -287,10 +306,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: flex;
 }
 
-.sidenav .sidenav-top a .logo {
+.sidenav .sidenav-top a img {
     padding: 12px 0px 0px 9px;
 }
 
@@ -301,20 +319,25 @@ body {
 	flex-direction: row;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-
 .inst-text {
 	white-space: nowrap;
-	padding: 1vh 0;
-	text-align: center;
-    font-size: 25px;
+    padding: 1vh 0;
+    text-align: center;
+    font-size: 2vh;
     color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.7vh;
+    height: 30px;
+    line-height: 30px;
 }
 
 .inst-logo {
 	text-align: center;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
