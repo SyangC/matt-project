@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 @font-face {
 	font-family: bigCarlson;
 	src: url("./fonts/Big Caslon Medium.ttf");
@@ -336,8 +335,35 @@ body {
 	text-align: center;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+/* On portrait (mobile), change the style of the sidebar (less padding and a smaller font size) */
+@media only screen and (orientation: portrait) and (max-device-width: 480px) {
+	body {
+
+	}
+
+	/* side menu */
+	.sidenav {
+		height: 100%;
+		width: 79px;
+		position: fixed;
+		z-index: 6;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		overflow: hidden;
+		border-right: 1px solid rgba(255, 255, 255, 0.3);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.sidenav .sidenav-top a img {
+		padding: 12px 0px 0px 9px;
+	}
+
+	.sidenav-bottom {
+		height: 5vh;
+		display: flex;
+		flex-direction: row;
+	}
 }
